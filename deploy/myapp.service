@@ -1,0 +1,14 @@
+[Unit]
+Description=CS411 capstone Node.js app
+After=network.target
+
+[Service]
+Type=simple
+User=myapp
+WorkingDirectory=/opt/myapp
+ExecStart=/usr/bin/env node /opt/myapp/index.js
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
